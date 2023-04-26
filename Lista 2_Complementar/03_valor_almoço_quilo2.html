@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar quanto pesou o seu prato de comida e também informar o preço do Kg 
+    no Buffet. Apresente o preço da refeição ao final do programa.
+    */
+    //ENTRADA
+    const peso = Number(prompt(`Informe o peso do seu prato:`).replace("," , "."));
+    const preço = Number(prompt(`Informe o preço do quilo no Buffet:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const total = preço * peso;
+
+    //SAÍDA
+    alert(`O valor do Buffet é de R$${total.toFixed(2).replace("." , ",")}.`);
+</script>

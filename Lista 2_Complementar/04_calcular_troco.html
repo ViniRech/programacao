@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar o valor pago pelo cliente e também informar quanto foi o consumo do 
+    cliente na loja. Considerando que o cliente dará um valor superior ao quanto consumiu, calcule e 
+    apresente, ao final do programa, quanto deverá dar de troco para o cliente.
+    */
+    //ENTRADA
+    const valorPago = Number(prompt(`Informe o valor pago pelo cliente:`).replace("," , "."));
+    const consumo = Number(prompt(`Informe o valor tota dos produtos consumidos pelo cliente:`)
+    .replace("," , "."));
+
+    //PROCESSAMENTO
+    const troco = valorPago - consumo;
+
+    //SAÍDA
+    alert(`O valor do troco é de ${troco.toFixed(2).replace("." , ",")}.`);
+</script>

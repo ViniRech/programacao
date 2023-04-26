@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Considere que uma revendedora paga a seus funcionários um salário fixo por mês, mais R$ 225,00 
+    para cada carro vendido e, além disso, 5% do valor das vendas efetuadas por ele. Pergunte ao 
+    usuário qual o seu salário fixo, quantos carros foram vendidos e o valor total das vendas. 
+    Calcule e apresente qual a remuneração final do vendedor, funcionário da revendedora. 
+    Também apresente qual será o salário após o desconto de 20% de impostos.
+    */
+    //ENTRADA
+    const salarioFixo = Number(prompt(`Informe o seu salário fixo:`).replace("," , "."));
+    const carrosVendidos = Number(prompt(`Informe quantos carros foram vendidos:`));
+    const vendas = Number(prompt(`Informe o valor total das vendas:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const salario = salarioFixo + 225 * carrosVendidos + 0.05 * vendas;
+    const salarioLiquido = salario * 0.8;
+
+    //SAÍDA
+    alert(`Seu salário é de R$${salario.toFixed(2).replace("." , ",")}.`);
+    alert(`Seu salário líquido é de R$${salarioLiquido.toFixed(2).replace("." , ",")}.`);
+</script>

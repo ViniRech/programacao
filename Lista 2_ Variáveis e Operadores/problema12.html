@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar a quantidade de cigarros fumados por dia e a quantidade de anos que fuma. 
+    Apresente o total de dias perdidos, considerando que cada cigarro reduz a vida em 10 minutos.
+    */
+    //ENTRADA
+    const cigarro = prompt(`Quantos cigarros você fuma por dia?`);
+    const ano = prompt(`Há quantos anos você fuma?`);
+
+    //PROCESSAMENTO
+    const a = Number(10) * Number(cigarro);
+    //Minutos de vida perdida por dia
+    const b = Number(a) * Number(365);
+    //Minutos de vida perdida por ano
+    const c = Number(b) * Number(ano);
+    //Minutos de vida perdida
+    const d = Number(c) / Number(60) / Number(24);
+    //Dias de vida perdida
+
+    //SAÍDA
+    alert(`Você reduziu ${d} dias de vida.`);
+</script>

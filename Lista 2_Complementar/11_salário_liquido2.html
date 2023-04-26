@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar o seu salário-base. Calcule e apresente o salário líquido ao final 
+    do programa, considerando que o funcionário recebe gratificação de R% 200,00 (livre de imposto) e 
+    lhe é descontado 10% sobre o salário-base.
+    */
+    //ENTRADA
+    const bruto = Number(prompt(`Informe o seu salário bruto:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const liquido = bruto * 0.9 + 200;
+
+    //SAÍDA
+    alert(`Seu salário líquido é de R$${liquido.toFixed(2).replace("." , ",")}.`);
+</script>

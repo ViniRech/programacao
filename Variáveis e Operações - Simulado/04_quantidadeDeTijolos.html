@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Pergunte ao usuário o tamanho da parede a ser construída (área em M²). Calcule a quantidade de tijolos que serão necessários para 
+    construir toda a parede, considerando que o tijolo possui 19cm x 19cm e deverão ser subtraídos 3% da área da parede, que corresponde 
+    com o cimento que une os tijolos.
+    */
+    //ENTRADA
+    const m2 = prompt(`Informe a área em metros quadrados da parede que será construída:`);
+
+    //PROCESSAMENTO
+    const cm2 = Number(m2 * 10000);
+    const conta = Number(cm2) / Number(19 * 19);
+    const cimento = Number(conta) * Number(0.03);
+    const tijolos = Number(conta - cimento);
+
+
+    //SAÍDA
+    alert(`Serão necessários ${Math.ceil(tijolos)} tijolos para a construção da parede:`);
+
+</script>

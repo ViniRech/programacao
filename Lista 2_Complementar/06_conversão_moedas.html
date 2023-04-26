@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    O usuário do programa pretende viajar para os Estados Unidos da América. Peça para ele informar 
+    quantos dólares levará para gastar durante a viagem. Também peça para o usuário informar a 
+    cotação do dólar. Ao final, apresente, em reais, quanto o usuário gastará na viagem.
+    */
+    //ENTRADA
+    const dolares = Number(prompt(`Informe quantos dólares pretende gastar na viagem:`)
+    .replace("," , "."));
+    const cotacao = Number(prompt(`Informe a cotação do dólar:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const reais = dolares * cotacao;
+
+    //SAÍDA
+    alert(`Serão necessários R$${reais.toFixed(2).replace("." , ",")} para a viagem.`);
+
+</script>

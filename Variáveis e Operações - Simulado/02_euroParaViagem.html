@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Faça um programa que pergunte ao usuário qual a cotação do euro. Pergunte também quantos euros serão necessários para realizar a viagem.
+    Calcule o custo da viagem em R$ (reais) e apresente o resultado ao fim do programa.
+    */
+   //ENTRADA
+   const euro = prompt(`Informe a cotação do euro:`);
+   const quantidade = prompt(`Informe quantos euros serão necessários para realizar a viagem:`);
+
+   //PROCESSAMENTO
+   const reais = Number(quantidade) * Number(euro);
+
+   //SAÍDA
+   alert(`Serão necessários ${Math.ceil(reais)} reais.`);
+</script>

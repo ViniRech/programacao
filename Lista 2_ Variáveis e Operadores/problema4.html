@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar o salário atual e a porcentagem de aumento. 
+    Faça o cálculo do salário final após o aumento baseado na porcentagem informada e apresente o resultado.
+    */
+    //ENTRADA
+    const salarioAtual = prompt(`Informe seu salário atual em números naturais:`);
+    const porcentagemAumento = prompt(`Informe a porcentagem de aumento de seu salário em números naturais:`);
+    //Apenas funciona em número naturais e sem caracteres
+
+    //PROCESSAMENTO
+    const valorAumento = Number(porcentagemAumento) / Number(100) * Number(salarioAtual);
+    const salarioFinal = Number(salarioAtual) + Number(valorAumento);
+
+    //SAÍDA
+    alert(`O seu salário final é de ${salarioFinal} reais.`);
+</script>

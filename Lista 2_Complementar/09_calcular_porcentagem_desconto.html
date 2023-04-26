@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar o preço original do produto e o preço do produto durante a campanha 
+    promocional. Calcule qual foi a porcentagem de desconto dada para o produto na promoção.
+    */
+    //ENTRADA
+    const original = Number(prompt(`Informe o preço original do produto:`).replace("," , "."));
+    const promocional = Number(prompt(`Informe o preço promocional do produto:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const porcentagem = 100 - (promocional * 100 / original);
+
+    //SAÍDA
+    alert(`A porgentagem de desconto foi de ${porcentagem.toFixed(2).replace("." , ",")}%.`);
+</script>

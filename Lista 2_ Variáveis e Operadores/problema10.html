@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Peça para o usuário informar uma data em dias com horas, minutos e segundos e retorne a data em segundos.
+    */
+    //ENTRADA
+    const dia = prompt(`Que dia é hoje?`);
+    const hora = prompt(`Que horas são?`);
+    const minuto = prompt(`Qual o minuto da hora?`);
+    const segundo = prompt(`Qual o segundo do minuto?`);
+
+    //PROCESSAMENTO
+    const a = Number(24 * dia) + Number(hora);
+    const b = Number(a * 60) + Number(minuto);
+    const c = Number(b * 60) + Number(segundo);
+
+    //SAÍDA
+    alert(`Já se passaram ${c} segundos.`);
+</script>
