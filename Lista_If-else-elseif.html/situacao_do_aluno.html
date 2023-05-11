@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Peça para o aluno informar as notas que obteve nos três trimestres. 
+    //Calcule a média e apresente a seguinte mensagem:
+    //Se a média for menor que 4: Reprovado
+    //Se a média for maior ou igual a 4 e menor que 6: Exame
+    //Se a média for maior ou igual a 6: Aprovado
+    const media = Number(prompt(`Informe a sua média:`).replace("," , "."));
+
+    if (media < 4) {
+        alert(`Sinto muito. Reprovado!`);
+    }
+    else if (media >= 4 && media < 6) {
+        alert(`Ficaste em exame.`);
+    }
+    else {
+        alert(`Aprovado!`);
+    }
+
+</script>
