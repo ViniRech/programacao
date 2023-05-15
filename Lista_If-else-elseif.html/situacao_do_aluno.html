@@ -5,7 +5,10 @@
     //Se a média for menor que 4: Reprovado
     //Se a média for maior ou igual a 4 e menor que 6: Exame
     //Se a média for maior ou igual a 6: Aprovado
-    const media = Number(prompt(`Informe a sua média:`).replace("," , "."));
+    const nota1 = Number(prompt(`Informe sua nota do 1º trimestre:`).replace("," , "."));
+    const nota2 = Number(prompt(`Informe sua nota do 2º trimestre:`).replace("," , "."));
+    const nota3 = Number(prompt(`Informe sua nota do 3º trimestre:`).replace("," , "."));
+    const media = (nota1 + nota2 + nota3) / 3;
 
     if (media < 4) {
         alert(`Sinto muito. Reprovado!`);
