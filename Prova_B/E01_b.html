@@ -1,0 +1,22 @@
+<script>
+    /*
+    PROBLEMA: Lista de exercício
+    O professor de Programação I disponibilizou para a turma uma lista com 15 exercícios.
+    Peça para quatro alunos informarem quantos dos 15 exercícios que cada um conseguiu fazer.
+    Calcule a média do número de exercícios que os alunos conseguiram resolver.
+    Apresente o restuldado ao final do programa.
+    */
+
+    //ENTRADA
+    const aluno1 = Number(prompt(`Informe quantos exercícios o alunos conseguiu fazer:`));
+    const aluno2 = Number(prompt(`Informe quantos exercícios o outro aluno consegui responder:`));
+    const aluno3 = Number(prompt(`Informe quantos exercícios outro estudante respondeu:`));
+    const aluno4 = Number(prompt(`Informe a quantidade de exercícios mais um aluno respondeu:`));
+
+    //PROCESSAMENTO
+    const media = (aluno1 + aluno2 + aluno3 + aluno4) / Number(4)
+
+    //SAÍDA
+    alert(`A média da quantidade de exercícios feitos foi de ${Math.round(media)} exercícios.`);
+    
+</script>

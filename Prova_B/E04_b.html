@@ -1,0 +1,19 @@
+<script>
+    /*
+    PROBLEMA: Valor da hora trabalhada
+    Uma pessoa é remunerada conforme a quantidade de horas trabalhadas.
+    Peça para a pessoa informar quanto que recebe por hora trabalhada.
+    Aos finais de semana, são acrescidos 75% do valor que recebe por hora trabalhada durante os dias úteis.
+    Calcule e apresente quanto receberá por hora trabalhada durante os finais de semana.
+    */
+
+    //ENTRADA
+    const hora = Number(prompt(`Informe o quanto recebe por hora trabalhada:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    const finalSemana = hora + hora * Number(0.75);
+
+    //SAÍDA
+    alert(`Nos finais de semana você recebe R$${finalSemana.toFixed(2).replace("." , ",")} por hora trabalhada.`);
+    
+</script>
