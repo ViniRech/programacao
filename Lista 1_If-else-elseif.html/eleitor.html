@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    //Peça para o usuário informar a sua idade e diga se ele está apto a votar ou não.
+    const idade = Number(prompt(`Informe sua idade:`).replace("anos" , ""));
+    const possuiTitulo = prompt(`Você possui título eleitoral? (S ou N)`).toUpperCase().trim();
+
+    if (possuiTitulo == "S" || possuiTitulo == "N") {
+        if (idade >= 16 && possuiTitulo == "S") {
+            alert(`Pode votar.`);
+        }
+        else {
+            alert(`Muito criança. Não vote.`);
+        }
+    }
+    else {
+        alert(`Opção inválida! Possui título deve ser S ou N!`);
+    }
+
+</script>
