@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     /*
     //PROBLEMA
@@ -5,13 +6,29 @@
     */
 
     //ENTRADA
-    const n1 = Number(prompt(`Digite um número:`).trim().replace("," , "."));
-    const n2 = Number(prompt(`Digite outro número:`).trim().replace("," , "."));
-    const n3 = Number(prompt(`Digite mais um número:`).trim().replace("," , "."));
+    let n1 = Number(prompt(`Digite um número:`).trim().replace("," , "."));
+    let n2 = Number(prompt(`Digite outro número:`).trim().replace("," , "."));
+    let n3 = Number(prompt(`Digite mais um número:`).trim().replace("," , "."));
+    let n4 = n1
     
     //PROCESSAMENTO
-    
-    
+    if (n2 > n1) {
+        n4 = n2
+        n2 = n1
+        n1 = n4
+    }
+    if (n3 > n1) {
+        n4 = n3
+        n3 = n1
+        n1 = n4
+    }
+    if (n3 > n2) {
+        n4 = n3
+        n3 = n2
+        n2 = n4
+    }
+    else (`Resposta inválida!`);
+    alert(`${n1}, ${n2}, ${n3}`);
     //SAÍDA
     
 </script>

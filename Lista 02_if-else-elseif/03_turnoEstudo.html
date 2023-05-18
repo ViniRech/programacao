@@ -12,11 +12,23 @@
     */
 
     //ENTRADA
-    
-
+    const turno = prompt(`Em qual turno você está: (Digite "M" para matutino, "V" para vespertino, "N" para noturno.)`).toUpperCase().trim();
     
     //PROCESSAMENTO
-
+    if (turno == "M" || turno == "V" || turno == "N") {
+        if (turno == "M") {
+            alert(`Bom dia!`);
+        }
+        else if (turno == "V") {
+            alert(`Boa tarde!`);
+        }
+        else {
+            alert(`Boa noite!`);
+        }
+    }
+    else {
+        alert(`Resposta inválida!`)
+    }
     
     //SAÍDA
     
