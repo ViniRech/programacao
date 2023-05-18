@@ -5,12 +5,19 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt(`Informe um número qualquer:`).trim().replace("," , "."));
     
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    if (!isNaN(numero)) {
+        if (numero % 2 == 0) {
+            alert(`O número escolhido é par.`);
+        }
+        else {
+            alert(`O número escolhido é impar.`);
+        }
+    }
+    else {
+        alert(`Resposta inválida.`);
+    }
     
 </script>

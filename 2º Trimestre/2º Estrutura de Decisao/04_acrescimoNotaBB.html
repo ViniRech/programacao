@@ -1,13 +1,33 @@
 <meta charset="UTF-8" />
 <script>
-    // Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
+    /* Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas 
+    melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a 
+    aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o 
+    seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes 
+    de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o 
+    big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se 
+    for positivo.*/
 
     // entrada
-
+    const notaAnterior = Number(prompt(`Informe a nota do LB anterior ao auxílio do BB:`)
+    .trim().replace("," , "."));
+    const notaPosterior = Number(prompt(`Informe a nota do LB após a ajuda do BB:`)
+    .trim().replace("," , "."));
     
     // processamento
+    const aumento = notaPosterior - notaAnterior;
 
-    
-    // saída
+    if (!isNaN(aumento)) {
+        if (aumento > 0) {
+            const aumentoBB = aumento * (0.25);
+            alert(`BB receberá um aumento de ${aumentoBB.toFixed(1).replace("." , ",")} em nota.`);
+        }
+        else {
+            alert(`Não receberá um aumento na nota, BB.`);
+        }
+    }
+    else {
+        alert(`Resposta inválida`);
+    }
 
 </script>
