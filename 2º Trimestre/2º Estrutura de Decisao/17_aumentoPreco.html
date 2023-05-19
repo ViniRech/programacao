@@ -7,10 +7,28 @@
         //- acima de 1500: aumento de 5 %
     
     // Entrada
-
+    const preco = Number(prompt(`Informe o preço do produto:`).trim().replace("," , "."));
     
     // Processamento
-
+    if (preco <= 280) {
+        const precoFinal = preco * 1.2
+        alert(`Ficou R$${precoFinal.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+    }
+    else if (preco <= 700) {
+        const precoFinal = preco * 1.15
+        alert(`Ficou R$${precoFinal.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+    }
+    else if (preco <= 1500) {
+        const precoFinal = preco * 1.1
+        alert(`Ficou R$${precoFinal.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+    }
+    else if (preco > 1500) {
+        const precoFinal = preco * 1.05
+        alert(`Ficou R$${precoFinal.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+    }
+    else {
+        alert(`Responda corretamente, Neanderthal.`);
+    }
     
     // Saída
 
