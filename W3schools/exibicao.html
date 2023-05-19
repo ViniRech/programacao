@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+
+    <h2>No Elemento</h2>
+    <p>innerHTML faz aparecer em um elemento.</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 5 + 6;
+    </script>
+
+    <h2>No Documento</h2>
+    <p>
+        Nunca chame document.write depois do documento ter terminado de carregar. 
+        Isso fará com que seja escrito por cima do documento.
+    </p>
+    <script>
+        document.write(5 + 6);
+    </script>
+
+    <h2>Em um Alerta</h2>
+    <script>
+        window.alert(5 + 6);
+        alert(5 + 6);
+    </script>
+
+    <h2>Impressão (Literalmente)</h2>
+    <button onclick="window.print()">Imprimir página</button>
+    
+</body>
+</html>
