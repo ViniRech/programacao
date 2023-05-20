@@ -32,6 +32,52 @@
 
     <h2>Impressão (Literalmente)</h2>
     <button onclick="window.print()">Imprimir página</button>
+
+    <h2>Variável em Texto</h2>
+    <p>Crie uma variável, diga seu valor e mostre:</p>
+    <p id="demo"></p>
+    <script>
+        let carName = "Volvo";
+        document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <h2>Redeclarando uma Variavel Usando let</h2>
+    <p id="demo"></p>
+    <script>
+        let  x = 10;
+        // Aqui x é 10
+
+        {  
+        let x = 2;
+        // Aqui x é 2
+        }
+
+        // Aqui x é 10
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <h2>JavaScript Arrays</h2>
+    <p>Array são baseados ao zero, que significa que o primeiro item é [0].</p>
+    <p id="demo"></p>
+    <script>
+        const cars = ["Saab","Volvo","BMW"];
+
+        document.getElementById("demo").innerHTML = cars[0];
+    </script>
+
+    <h2>JavaScript Objects</h2>
+    <p id="demo"></p>
+    <script>
+    const person = {
+        firstName : "John",
+        lastName  : "Doe",
+        age     : 50,
+        eyeColor  : "blue"
+        };
+
+        document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
     
 </body>
 </html>
