@@ -16,12 +16,39 @@
     */
 
     //ENTRADA
-<a
+    let litro = Number(prompt(`Informe o quando de combustível foi vendido:`).trim().replace("," , "."));
+    let tipo = prompt(`Informe o tipo do combustível (A ou G):`).trim().toUpperCase();
 
     //PROCESSAMENTO
+    if (tipo == "A") {
 
-    
-    //SAÍDA
+        if (litro <= 20) {
+            litro = litro * 6.1 * 0.97
+            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        }
 
+        else if (litro > 20) {
+            litro = litro * 6.1 * 0.95
+            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Resposta inválida.`);
+
+    }
+
+    else if (tipo == "G") {
+
+        if (litro <= 20) {
+            litro = litro * 6.5 * 0.96
+            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        }
+
+        else if (litro > 20) {
+            litro = litro * 6.5 * 0.94
+            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Resposta inválida.`);
+
+    }
+    else alert(`Resposta inválida.`);
 
 </script>
