@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+    <h2>A Proprieda length</h2>
+
+    <p>O comprimento de uma string é:</p>
+    <p id="demo"></p>
+
+    <script>
+        let texto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo").innerHTML = texto.length;
+    </script>
+
+    <h2>Sequência de Escape</h2>
+    <p>A sequência de escape \" insere aspas duplas na string.</p>
+    <p id="demo"></p>
+
+    <script>
+        let text = "Nós somos os chamados \"Vikings\" do norte.";
+        document.getElementById("demo").innerHTML = text; 
+    </script>
+
+    <p>A sequência de escape \' insere aspas simples na string.</p>
+    <p id="demo"></p>
+
+    <script>
+        let textos = 'It\'s alright.';
+        document.getElementById("demo").innerHTML = textos; 
+    </script>
+
+    <p>A sequência de escape \\ insere uma barra invertida na string.</p>
+    <p id="demo"></p>
+
+    <script>
+        let texts = "The character \\ is called backslash.";
+        document.getElementById("demo").innerHTML = texts; 
+    </script>
+
+    <h2>Quebra de Linha</h2>
+    <p>Você pode quebrar uma linha de código com um texto string com uma barra invertida.</p>
+    <p id="demo"></p>
+    
+    <script>
+        document.getElementById("demo").innerHTML = "Hello \
+        Dolly!";
+    </script>
+
+    <h2>Método de Extração</h2>
+    <p>A parte extraída da string é:</p>
+    <p id="demo"></p>
+
+    <script>
+        let txt = "Apple, Banana, Kiwi";
+        let part = txt.slice(7,13);
+        document.getElementById("demo").innerHTML = part; 
+    </script>
+
+    <p>Extrair a parte de uma string contando do fim:</p>
+    <p id="demo"></p>
+
+    <script>
+        let txts = "Apple, Banana, Kiwi";
+        let parte = txts.slice(-12);
+        document.getElementById("demo").innerHTML = parte;
+    </script>
+
+    <p>
+        O método substring() extrai a parte da string e não retorna a parte 
+        extraida em uma nova string:
+    </p>
+    <p id="demo"></p>
+
+    <script>
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo").innerHTML = str.substring(7,13);
+    </script>
+
+    <p>
+        O método substr() extrai uma parte de uma string e retorna a parte extraída 
+        em uma nova string:
+    </p>
+    <p id="demo"></p>
+    
+    <script>
+        let st = "Apple, Banana, Kiwi";
+        document.getElementById("demo").innerHTML = st.substr(7,6);
+    </script>
+
+    <h2>Método .replace()</h2>
+    <p>Reposicionar "Microsoft" com "W3Schools" no parágrafo abaixo:</p>
+    <button onclick="myFunction()">Tente</button>
+    <p id="demo">Por favor visite a Microsoft!</p>
+    <!--Sendo indiferente ao tipo de letra-->
+    <script>
+        function myFunction() {
+            let t = document.getElementById("demo").innerHTML; 
+            document.getElementById("demo").innerHTML =
+            t.replace(/MICROSOFT/i,"W3Schools");
+        }
+    </script>
+
+    <button onclick="myFunctio()">Tente</button>
+    <p id="demo">Por favor visite Microsoft e Microsoft!</p>
+    <!--Para todos as palavras-->
+    <script>
+        function myFunctio() {
+            let textss = document.getElementById("demo").innerHTML; 
+            document.getElementById("demo").innerHTML =
+            textss.replace(/Microsoft/g,"W3Schools");
+        }
+    </script>
+
+    <h2>O Método concat()</h2>
+    <p>O método concat() junta duas ou mais strings:</p>
+    <p id="demo"></p>
+
+    <script>
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ",text2);
+        document.getElementById("demo").innerHTML = text3;
+    </script>
+
+    <h2>O Método padStart()</h2>
+    <!--Há também o padEnd()-->
+    <p>O método padStart() preenche uma string do início.</p>
+    <p>Preenche a string com outra string (multiplas vezes) até chegar a largura dada.</p>
+    <p id="demo"></p>
+
+    <script>
+        let texo = "5";
+        texo = texo.padStart(4,"0");
+        document.getElementById("demo").innerHTML = texo;
+    </script>
+
+
+</body>
+
+</html>
