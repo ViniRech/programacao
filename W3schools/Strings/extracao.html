@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>Método de Extração</h2>
+
+    <p>A parte extraída da string é:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let texto = "Apple, Banana, Kiwi";
+        let part = texto.slice(7,13);
+        document.getElementById("demo").innerHTML = part; 
+    </script>
+
+    <p>Extrair a parte de uma string contando do fim:</p>
+
+    <p id="demos"></p>
+
+    <script>
+        let texto2 = "Apple, Banana, Kiwi";
+        let parte = texto2.slice(-12);
+        document.getElementById("demos").innerHTML = parte;
+    </script>
+
+    <p>
+        O método substring() extrai a parte da string e não retorna a parte 
+        extraida em uma nova string:
+    </p>
+
+    <p id="dem"></p>
+
+    <script>
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("dem").innerHTML = str.substring(7,13);
+    </script>
+
+    <p>
+        O método substr() extrai uma parte de uma string e retorna a parte extraída 
+        em uma nova string:
+    </p>
+
+    <p id="demoss"></p>
+    
+    <script>
+        let string = "Apple, Banana, Kiwi";
+        document.getElementById("demoss").innerHTML = string.substr(7,6);
+    </script>
+
+</body>
+
+</html>

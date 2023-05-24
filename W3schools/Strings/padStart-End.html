@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>O Método padStart()</h2>
+
+    <p>O método padStart() preenche uma string do início.</p>
+
+    <p>Preenche a string com outra string (multiplas vezes) até chegar a largura dada.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let texto = "5";
+        texto = texto.padStart(4,"0");
+        document.getElementById("demo").innerHTML = texto;
+    </script>
+
+    <p>Há também o padEnd(), que preenche o fim de uma string.</p>
+
+</body>
+
+</html>

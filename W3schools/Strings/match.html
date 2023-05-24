@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>O Método match()</h2>
+
+    <p>Performe uma procura para "ain":</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "The rain in SPAIN stays mainly in the plain"; 
+        const myArr = text.match(/ain/);
+        document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+    </script>
+
+    <p>Performe uma procura global para "ain":</p>
+
+    <p id="demos"></p>
+
+    <script>
+        let texto = "The rain in SPAIN stays mainly in the plain"; 
+        const myArray = texto.match(/ain/g);
+        document.getElementById("demos").innerHTML = myArray.length + " " + myArray;
+    </script>
+
+    <p>Performe uma pesquisa global para "ain" sendo indistinto ao tipo de letra:</p>
+
+    <p id="dem"></p>
+
+    <script>
+        let txt = "The rain in SPAIN stays mainly in the plain"; 
+        const myAr = txt.match(/ain/gi);
+        document.getElementById("dem").innerHTML = myAr.length + " " + myAr;
+    </script>
+
+</body>
+
+</html>

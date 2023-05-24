@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>Método .replace()</h2>
+
+    <p>
+        Reposicionar "Microsoft" com "W3Schools" no parágrafo abaixo (sendo indiferente ao tipo de letra):
+    </p>
+
+    <button onclick="myFunction()">Tente</button>
+
+    <p id="demo">Por favor visite a Microsoft!</p>
+
+    <script>
+        function myFunction() {
+            let texto = document.getElementById("demo").innerHTML; 
+            document.getElementById("demo").innerHTML = texto.replace(/MICROSOFT/i,"W3Schools");
+        }
+    </script>
+
+    <p>Reposicionando todas as "Microsoft's"</p>
+
+    <button onclick="myFunctio()">Tente</button>
+
+    <p id="demos">Por favor visite Microsoft e Microsoft!</p>
+
+    <script>
+        function myFunctio() {
+            let texto2 = document.getElementById("demo").innerHTML; 
+            document.getElementById("demos").innerHTML = texto2.replace(/Microsoft/g,"W3Schools");
+        }
+    </script>
+
+</body>
+
+</html>

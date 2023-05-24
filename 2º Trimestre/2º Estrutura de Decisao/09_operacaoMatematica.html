@@ -9,11 +9,23 @@
     */
 
     //ENTRADA
+    let n = Number(prompt(`Informe um número:`).trim().replace("," , "."));
 
-<a
     //PROCESSAMENTO
+    if (!isNaN(n)) {
 
-    
+        if (n % 2 == 0) alert(`É par.`);
+        else alert(`É impar.`);
+
+        if (n >= 0) alert(`É positivo.`);
+        else alert(`É negativo.`);
+
+        if (Number.isInteger(n)) alert(`É inteiro.`);
+        else alert(`É decimal.`);
+
+    }
+    else alert(`Resposta inválida.`);
+
     //SAÍDA
 
 

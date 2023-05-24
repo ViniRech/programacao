@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>O Método startsWith()</h2>
+
+    <p>Cheque se uma string começa com "Hello":</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "Hello world, welcome to the universe.";
+        document.getElementById("demo").innerHTML = text.startsWith("Hello");
+    </script>
+
+    <p id="demos"></p>
+    
+    <script>
+        let texto = "Hello world, welcome to the universe.";
+        document.getElementById("demos").innerHTML = texto.startsWith("world", 6);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+
+    <h2>O Método search()</h2>
+
+    <p>O método search() retorna uma posição da primeira ocorrência de uma string em uma string.</p>
+
+    <p>A posição da primeira ocorrência de "locate" é:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        let index = text.search("locate");
+        document.getElementById("demo").innerHTML = index; 
+    </script>
+
+    <p>
+        O search()método não pode receber um segundo argumento de posição inicial.
+        O indexOf()método não pode obter valores de pesquisa poderosos (expressões regulares).
+    </p>
+
+
+</body>
+
+</html>

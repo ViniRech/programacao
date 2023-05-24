@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h2>JavaScript Global Functions</h2>
+
+    <h2>parseInt()</h2>
+
+    <p>A função global de JavaScript parseInt() converte strings para números inteiros:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");  
+    </script>
+
+</body>
+
+</html>
