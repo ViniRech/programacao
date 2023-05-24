@@ -13,19 +13,34 @@
     */
     //0,5 na prova: Eduardo de Oliveira
     //ENTRADA
-    let caixa = Number(prompt(`Informe o valor do saque: (Valor mínimo de R$10,00. 
-    Valor máximo de R$600,00)`).trim());
-    
+    valor = int(input("Informe o valor do saque: "))
+
     //PROCESSAMENTO
-    if (caixa[0] != 0) {
-        
-        caixa[0]
-        caixa[1]
-        caixa[2]
-        alert(`Serão necessárias ${caixa[0]} notas de 100, ${caixa[1]} notas de 
-        10 e ${caixa[2]} moedas de 1 real.`);
+
+    if (valor < 10 || valor > 600:) alert("Valor inválido! O valor mínimo é de 10 reais e o máximo é de 600 reais.");
+
+    else {
+    notas_100 = valor // 100
+    valor = valor % 100
+
+    notas_50 = valor // 50
+    valor = valor % 50
+
+    notas_10 = valor // 10
+    valor = valor % 10
+
+    notas_5 = valor // 5
+    valor = valor % 5
+
+    notas_1 = valor // 1
     }
-    <a
+
+    print("Notas de 100: ", notas_100)
+    print("Notas de 50: ", notas_50)
+    print("Notas de 10: ", notas_10)
+    print("Notas de 5: ", notas_5)
+    print("Notas de 1: ", notas_1)
+
 
     //SAÍDA
 
