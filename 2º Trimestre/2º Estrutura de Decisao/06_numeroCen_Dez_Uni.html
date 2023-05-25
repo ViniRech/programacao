@@ -15,7 +15,10 @@
     let numero = prompt(`Informe um número inteiro menor que 1000:`).trim();
 
     //PROCESSAMENTO
-    alert(`${numero[0]} centenas, ${numero[1]} dezenas e ${numero[2]} unidades.`);
-    <a
+    numero /= 100
+    if (numero > 0) {
+        alert(`${Math.floor(numero)} centenas, ${}`)
+    }
+    numero %= 100
     
 </script>

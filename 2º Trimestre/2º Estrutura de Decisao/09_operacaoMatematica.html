@@ -9,24 +9,29 @@
     */
 
     //ENTRADA
-    let n = Number(prompt(`Informe um número:`).trim().replace("," , "."));
+    let n1 = Number(prompt(`Informe um número:`).trim().replace("," , "."));
+    let n2 = Number(prompt(`Informe outro número:`).trim().replace("," , "."));
+    const operacao = prompt(`Informe a operação que desejas: (Soma, Subtração, Multiplicação ou Divisão:)`).trim().toLowerCase();
+    let n;
 
     //PROCESSAMENTO
+    if (operacao == "soma") n = n1 + n2;
+    else if (operacao == "subtração") n = n1 - n2;
+    else if (operacao == "multiplicação") n = n1 * n2;
+    else if (operacao == "divisão") n = n1 / n2;
+
     if (!isNaN(n)) {
 
-        if (n % 2 == 0) alert(`É par.`);
-        else alert(`É impar.`);
+        if (n % 2 == 0) alert(`${n} é par.`);
+        else alert(`${n} é impar.`);
 
-        if (n >= 0) alert(`É positivo.`);
-        else alert(`É negativo.`);
+        if (1 >= 0) alert(`${n} é positivo.`);
+        else alert(`${n} é negativo.`);
 
-        if (Number.isInteger(n)) alert(`É inteiro.`);
-        else alert(`É decimal.`);
+        if (Number.isInteger(n)) alert(`${n} é inteiro.`);
+        else alert(`${n} é decimal.`);
 
     }
     else alert(`Resposta inválida.`);
-
-    //SAÍDA
-
 
 </script>
