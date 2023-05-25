@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>O Método splice()</h2>
+
+    <p>O método splice() adiciona nevos elementos para uma array:</p>
+    <p>
+        O primeiro parâmetro (2) define a posição onde novos elementos devem ser adicionados
+        (spliced in).
+    </p>
+    <p>O segundo parâmetro (0) define quantos elementos devem ser removidos.</p>
+    <p>O restante dos parâmetros ("Lemon" , "Kiwi") definem os novos elementos a serem adicionados.</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        fruits.splice(2, 0, "Lemon", "Kiwi");
+        document.getElementById("demo2").innerHTML = fruits;
+    </script>
+
+    <p>O método splice() pode ser usado para remover elementos de uma array:</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruit;
+        fruit.splice(0, 1);
+        document.getElementById("demo2").innerHTML = fruit;
+    </script>
+
+</body>
+
+</html>
