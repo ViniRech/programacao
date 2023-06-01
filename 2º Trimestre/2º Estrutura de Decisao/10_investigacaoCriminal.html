@@ -18,14 +18,14 @@
     let p3 = prompt(`Mora perto da vítima? (S ou N)`).toUpperCase().trim();
     let p4 = prompt(`Devia para a vítima? (S ou N)`).toUpperCase().trim();
     let p5 = prompt(`Já trabalhou com a vítima? (S ou N)`).toUpperCase().trim();
-    let sins = 0
+    let sins = 0;
 
     //PROCESSAMENTO
-    if (p1 === "S") sins += 1
-    if (p2 === "S") sins += 1
-    if (p3 === "S") sins += 1
-    if (p4 === "S") sins += 1
-    if (p5 === "S") sins += 1
+    if (p1 === "S") sins ++;
+    if (p2 === "S") sins ++;
+    if (p3 === "S") sins ++;
+    if (p4 === "S") sins ++;
+    if (p5 === "S") sins ++;
 
     if (sins === 5) alert(`Assassino!`);
     else if (sins >= 3) alert(`Cúmplice!`);
