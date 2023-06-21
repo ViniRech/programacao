@@ -21,33 +21,26 @@
 
     //PROCESSAMENTO
     if (tipo == "A") {
-
         if (litro <= 20) {
             litro = litro * 6.1 * 0.97
             alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
         }
-
         else if (litro > 20) {
             litro = litro * 6.1 * 0.95
             alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
         }
         else alert(`Resposta inválida.`);
-
     }
-
     else if (tipo == "G") {
-
         if (litro <= 20) {
             litro = litro * 6.5 * 0.96
             alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
         }
-
         else if (litro > 20) {
             litro = litro * 6.5 * 0.94
             alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
         }
         else alert(`Resposta inválida.`);
-
     }
     else alert(`Resposta inválida.`);
 
