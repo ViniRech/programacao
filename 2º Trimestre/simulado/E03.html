@@ -1,0 +1,45 @@
+<script>
+    //PROBLEMA: Viajar para algum lugar
+    /* Peça para o usuário informar para qual estado deseja realizar a viagem. (Rio Grande do Sul-RS ou Minas Gerais-MG). 
+    Peça também para informar quantos dias ficará em viagem. O usuário também deverá informar "quantos dinheiros" (R$) possui para gastar na viagem.
+    Considere que o custo diário de viagem para "RS" será de R$ 180,00 (180) e o custo diário de viagem para "MG" será de R$ 210,00 (210).
+    Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, 
+    o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. 
+    Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará "quantos dinheiros" (R$) estão faltando para realizar a viagem. */
+
+    //ENTRADA
+    const estado = prompt(`Desejas viajar para (RS) ou(MG)?`).trim().toUpperCase();
+    let dias = Number(prompt(`Por quantos dias ficará?`).trim());
+    let dinheiro = Number(prompt(`Dinheiro no bolso:`).trim().replace("," , "."));
+
+    //PROCESSAMENTO
+    if (estado == "RS") {
+        let estadia = dias * 180;
+
+        if (estadia < dinheiro) {
+            alert(`Boa viagem! Poderá ficar ${Math.floor(dias)} dias com o custo de R$${estadia.toFixed(2).replace("." , ",")}`);
+        }
+        else if (estadia > dinheiro) {
+            estadia -= dinheiro;
+            alert(`Sem férias! Faltam R$${estadia.toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Resposta Inválida!`);
+    }
+    else if (estado == "MG") {
+        let estadia = dias * 210;
+
+        if (estadia < dinheiro) {
+            alert(`Boa viagem! Poderá ficar ${Math.floor(dias)} dias com o custo de R$${estadia.toFixed(2).replace("." , ",")}`);
+        }
+        else if (estadia > dinheiro) {
+            estadia -= dinheiro;
+            alert(`Sem férias! Faltam R$${estadia.toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Resposta Inválida!`);
+        
+    }
+    else alert(`Resposta Inválida!`);
+
+    //SAÍDA
+
+</script>
