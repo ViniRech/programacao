@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Aumento de Preço
+    //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+        //- até 280(inclusive): aumento de 20 %
+        //- até 700(inclusive): aumento de 15 %
+        //- até 1500(inclusive): aumento de 10 %
+        //- acima de 1500: aumento de 5 %
+    
+    //Entrada
+    let preco = Number(prompt(`Informe o preço do produto:`).trim().replace("," , "."));
+
+    //Processamento
+    let mensagemFinal = (preco <= 280) ? `Preço final de R$${(preco * 1.2).toFixed(2).replace("." , ",")}`
+    : (preco <= 700) ? `Preço final de R$${(preco * 1.15).toFixed(2).replace("." , ",")}`
+    : (preco <= 1500) ? `Preço final de R$${(preco * 1.1).toFixed(2).replace("." , ",")}`
+    : (preco > 1500) ? `Preço final de R$${(preco * 1.05).toFixed(2).replace("." , ",")}`
+    : `Resposta Inválida!`;
+ 
+    //Saída
+    alert(mensagemFinal);
+
+</script>
