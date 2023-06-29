@@ -7,14 +7,23 @@
     // - Conta de telefone
     // - Supermercado
     // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    // Verifique se o usuário ganha mais do que gasta e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
+    let agua = Number(prompt(`Informe sua despesa de água:`).trim().replace(",", "."));
+    let energia = Number(prompt(`Informe sua despesa de energia elétrica:`).trim().replace(",", "."));
+    let quatroG = Number(prompt(`Informe sua despesa de 4G:`).trim().replace(",", "."));
+    let supermercado = Number(prompt(`Informe sua despesa de supermercado:`).trim().replace(",", "."));
+    let salario = Number(prompt(`Informe seu salário mensal:`).trim().replace(",", "."));
 
     //Processamento
+    let mensagemFinal = ((agua + energia + quatroG + supermercado) > salario) ? 
+    `Você gasta mais que recebe. Sobram R$${(agua + energia + quatroG + supermercado - salario).toFixed(2).replace(".", ",")} de despesas.`
+        : ((agua + energia + quatroG + supermercado) < salario) ? 
+        `Você recebe mais que gasta. Sobram R$${(salario - (agua + energia + quatroG + supermercado)).toFixed(2).replace(".", ",")} para gastar.`
+            : `Resposta Inválida!`;
 
-    
     //Saída
-    
+    alert(mensagemFinal);
+
 </script>

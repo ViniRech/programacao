@@ -8,11 +8,16 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
+    let cao = parseInt(prompt(`Informe a idade de seu cão:`).trim());
+    const porte = prompt(`Informe o porte de seu dog: (P ou M ou G)`).trim().toUpperCase();
 
     //Processamento
-
+    let mensagemFinal = (porte == "P") ? `A idade do seu cão é de ${cao * 5} anos humanos.`
+    : (porte == "M") ? `A idade do seu cão é de ${cao * 6} anos humanos.`
+    : (porte == "G") ? `A idade do seu cão é de ${cao * 7} anos humanos.`
+    : `Resposta Inválida!`;
     
     //Saída
+    alert(mensagemFinal);
 
 </script>

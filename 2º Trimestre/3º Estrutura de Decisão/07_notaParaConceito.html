@@ -10,11 +10,17 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    let nota = Number(prompt(`Informe sua nota para a conversão:`).trim().replace("," , "."));
 
     //Processamento
-
+    let mensagemFinal = (nota <= 10 && nota >= 9) ? `Nota conceito: A`
+    : (nota < 9 && nota >= 8) ? `Nota conceito: B`
+    : (nota < 8 && nota >= 7) ? `Nota conceito: C`
+    : (nota < 7 && nota >= 6) ? `Nota conceito: D`
+    : (nota < 6 && nota >= 0) ? `Nota conceito: E`
+    : `Resposta Inválida!`;
     
     //Saída
+    alert(mensagemFinal);
 
 </script>

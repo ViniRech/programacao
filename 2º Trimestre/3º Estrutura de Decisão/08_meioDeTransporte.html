@@ -1,17 +1,22 @@
 <meta charset="UTF-8">
 <script>
     //Problema: Meio de transporte mais barato
-    // Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
-    // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
-    // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
+    /* Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar 
+    para o trabalho diariamente.
+    Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
+    Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente. */
 
     //Entrada
-
+    let preco = Number(prompt(`Informe o preço do litro de combustível:`).trim().replace("," , "."));
+    let litro = Number(prompt(`Informe quantos litros de combustível são usados diariamente:`).trim().replace("," , "."));
+    let onibus = Number(prompt(`Informe o preço do transporte público diário:`).trim().replace("," , "."));
 
     //Processamento
-
+    let mensagemFinal = ((preco * litro) < onibus) ? `Transporte privado sai mais barato: R$${((preco * litro) * 2).toFixed(2).replace("." , ",")} ida e volta.`
+    : ((preco * litro) > onibus) ? `Transporte público sai mais barato: R$${(onibus * 2).toFixed(2).replace("." , ",")} ida e volta.`
+    : `Resposta Inválida!`;
     
     //Saída
-
+    alert(mensagemFinal);
     
 </script>
