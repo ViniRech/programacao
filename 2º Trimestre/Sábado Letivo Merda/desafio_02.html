@@ -47,6 +47,205 @@
     Pergunte, também, se o usuário deseja saber o percentual pago de imposto e apresente este valor. Caso o usuário responda positivamente, 
     mostre o percentual pago de imposto. Faça uma relação sobre o imposto pago e o rendimento obtido e aponte se o investimento foi vantajoso 
     ou não e qual a diferença entre os dois.
-
     */
+
+    let valorInvestido = parseFloat(prompt("Informe a quantia de dinheiro a ser investida:"));
+let tipoInvestimento;
+let taxaRendimento;
+let valorTotalInvestido = valorInvestido;
+let percentualImposto = 0;
+let impostoTotal = 0;
+let rendimentoTotal = 0;
+let sacarQuantia = false;
+
+let tentativasInvalidas = 0;
+
+while (tentativasInvalidas < 3) {
+  tipoInvestimento = parseInt(prompt("Informe o tipo de investimento desejado (1-4):\n1- Poupança\n2- Renda Fixa\n3- Fundos Imobiliários\n4- Ações"));
+  
+  if (tipoInvestimento >= 1 && tipoInvestimento <= 4) {
+    break;
+  } else {
+    alert("Tipo de investimento inválido. Tente novamente.");
+    tentativasInvalidas++;
+  }
+}
+
+if (tentativasInvalidas === 3) {
+  alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+} else {
+  if (tipoInvestimento === 1) {
+    taxaRendimento = 0.03;
+  } else if (tipoInvestimento === 2) {
+    taxaRendimento = 0.05;
+  } else if (tipoInvestimento === 3) {
+    taxaRendimento = 0.07;
+  } else if (tipoInvestimento === 4) {
+    taxaRendimento = 0.1;
+  }
+
+  valorTotalInvestido += valorInvestido * taxaRendimento;
+
+  let sacarOpcoesInvalidas = 0;
+
+  while (sacarOpcoesInvalidas < 3) {
+    let sacarOpcao = parseInt(prompt("Deseja sacar alguma quantia durante o ano?\n1- Sim\n2- Não"));
+
+    if (sacarOpcao === 1) {
+      if (tipoInvestimento === 3 || tipoInvestimento === 4) {
+        alert("Opção inválida para o tipo de investimento selecionado. Tente novamente.");
+        sacarOpcoesInvalidas++;
+      } else {
+        sacarQuantia = true;
+        break;
+      }
+    } else if (sacarOpcao === 2) {
+      break;
+    } else {
+      alert("Opção inválida. Tente novamente.");
+      sacarOpcoesInvalidas++;
+    }
+  }
+
+  if (sacarOpcoesInvalidas === 3) {
+    alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+  } else {
+    if (sacarQuantia) {
+      let quantiaSacar = parseFloat(prompt("Informe a quantia a ser sacada:"));
+
+      if (quantiaSacar > valorTotalInvestido) {
+        alert("Quantia inválida. O valor a ser sacado é maior do que o valor total investido.");
+      } else {
+        valorTotalInvestido -= quantiaSacar;
+      }
+    }
+
+    let simularImposto = false;
+
+    let simularImpostoOpcoesInvalidas = 0;
+
+    while (simularImpostoOpcoesInvalidas < 3) {
+      let simularImpostoOpcao = parseInt(prompt("Deseja simular o valor a ser pago de imposto sobre o lucro?\n1- Sim\n2- Não"));
+
+      if (simularImpostoOpcao === 1) {
+        simularImposto = true;
+        break;
+      } else if (simularImpostoOpcao === 2) {
+        break;
+      } else {
+        alert("Opção inválida. Tente novamente.");
+        simularImpostoOpcoesInvalidas++;
+      }
+    }
+
+    if (simularImpostoOpcoesInvalidas === 3) {
+      alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+    } else {
+      if (simularImposto) {
+        let percentualImpostoInvalido = true;
+        let tentativasPercentualImposto = 0;
+
+        while (percentualImpostoInvalido && tentativasPercentualImposto < 3) {
+          percentualImposto = parseFloat(prompt("Informe o percentual de imposto a ser pago sobre o lucro obtido:"));
+
+          if (percentualImposto >= 0) {
+            percentualImpostoInvalido = false;
+          } else {
+            alert("Percentual de imposto inválido. Tente novamente.");
+            tentativasPercentualImposto++;
+          }
+        }
+
+        if (tentativasPercentualImposto === 3) {
+          alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+        } else {
+          impostoTotal = (valorTotalInvestido - valorInvestido) * (percentualImposto / 100);
+          valorTotalInvestido -= impostoTotal;
+        }
+      }
+
+      let aportarMais = false;
+
+      let aportarMaisOpcoesInvalidas = 0;
+
+      while (aportarMaisOpcoesInvalidas < 3) {
+        let aportarMaisOpcao = parseInt(prompt("Deseja aportar mais alguma quantia no início do segundo ano?\n1- Sim\n2- Não"));
+
+        if (aportarMaisOpcao === 1) {
+          aportarMais = true;
+          break;
+        } else if (aportarMaisOpcao === 2) {
+          break;
+        } else {
+          alert("Opção inválida. Tente novamente.");
+          aportarMaisOpcoesInvalidas++;
+        }
+      }
+
+      if (aportarMaisOpcoesInvalidas === 3) {
+        alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+      } else {
+        if (aportarMais) {
+          let valorAporte = parseFloat(prompt("Informe o valor a ser aportado no início do segundo ano:"));
+
+          if (valorAporte >= 0) {
+            valorInvestido = valorAporte;
+            valorTotalInvestido += valorAporte * taxaRendimento;
+          } else {
+            alert("Valor de aporte inválido. O programa será encerrado.");
+          }
+        }
+
+        let aportarMaisTerceiroAno = false;
+
+        let aportarMaisTerceiroAnoOpcoesInvalidas = 0;
+
+        while (aportarMaisTerceiroAnoOpcoesInvalidas < 3) {
+          let aportarMaisTerceiroAnoOpcao = parseInt(prompt("Deseja aportar mais alguma quantia no início do terceiro ano?\n1- Sim\n2- Não"));
+
+          if (aportarMaisTerceiroAnoOpcao === 1) {
+            aportarMaisTerceiroAno = true;
+            break;
+          } else if (aportarMaisTerceiroAnoOpcao === 2) {
+            break;
+          } else {
+            alert("Opção inválida. Tente novamente.");
+            aportarMaisTerceiroAnoOpcoesInvalidas++;
+          }
+        }
+
+        if (aportarMaisTerceiroAnoOpcoesInvalidas === 3) {
+          alert("Número máximo de tentativas inválidas atingido. O programa será encerrado.");
+        } else {
+          if (aportarMaisTerceiroAno) {
+            let valorAporteTerceiroAno = parseFloat(prompt("Informe o valor a ser aportado no início do terceiro ano:"));
+
+            if (valorAporteTerceiroAno >= 0) {
+              valorInvestido = valorAporteTerceiroAno;
+              valorTotalInvestido += valorAporteTerceiroAno * taxaRendimento;
+            } else {
+              alert("Valor de aporte inválido. O programa será encerrado.");
+            }
+          }
+
+          let rendimentoAnual = valorTotalInvestido - valorInvestido;
+          let impostoRendimento = impostoTotal - (valorTotalInvestido - valorInvestido);
+
+          alert("Valor total do investimento após o terceiro ano: " + valorTotalInvestido.toFixed(2));
+          alert("Imposto total pago ao longo do tempo: " + impostoTotal.toFixed(2));
+          alert("Percentual total pago de imposto: " + (impostoTotal / rendimentoTotal * 100).toFixed(2) + "%");
+
+          if (rendimentoAnual > impostoRendimento) {
+            alert("O investimento foi vantajoso. O rendimento obtido foi " + (rendimentoAnual - impostoRendimento).toFixed(2) + " maior do que o imposto pago.");
+          } else if (rendimentoAnual < impostoRendimento) {
+            alert("O investimento não foi vantajoso. O imposto pago foi " + (impostoRendimento - rendimentoAnual).toFixed(2) + " maior do que o rendimento obtido.");
+          } else {
+            alert("O investimento não foi vantajoso. O rendimento obtido foi igual ao imposto pago.");
+          }
+        }
+      }
+    }
+  }
+}
+
 </script>
