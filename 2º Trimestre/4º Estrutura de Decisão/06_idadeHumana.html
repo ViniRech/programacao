@@ -8,11 +8,26 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-
+    let anos = Number(prompt(`Quantos anos tem o seu cão?`).trim());
+    let porte = prompt(`Informe o porte de seu cão: ("P" - "M" - "G")`).trim().toUpperCase();
     
     // PROCESSAMENTO
-
+    switch (porte) {
+        case "P":
+            anos *= 5;
+            alert(`Seu cão tem ${anos} anos humanos.`);
+            break;
+        case "M":
+            anos *= 6;
+            alert(`Seu cão tem ${anos} anos humanos.`);
+            break;
+        case "G":
+            anos *= 7;
+            alert(`Seu cão tem ${anos} anos humanos.`);
     
-    // SAÍDA
+        default:
+            alert(`Resposta Inválida!`);
+            break;
+    }
 
     </script>

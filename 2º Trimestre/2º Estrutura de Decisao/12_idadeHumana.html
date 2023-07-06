@@ -10,7 +10,7 @@
     // Entrada.
     
     let anos = Number(prompt(`Quantos anos tem o seu cão?`).trim());
-    let porte = prompt(`Informe o porte de seu cão: ("P" - "M" - "F")`).trim().toUpperCase();
+    let porte = prompt(`Informe o porte de seu cão: ("P" - "M" - "G")`).trim().toUpperCase();
     
     // Processamento
     if (porte == "P") {
@@ -21,7 +21,7 @@
         anos *= 6
         alert(`Seu cão tem ${anos} anos humanos.`);
     }
-    else if (porte == "F") {
+    else if (porte == "G") {
         anos *= 7
         alert(`Seu cão tem ${anos} anos humanos.`);
     }

@@ -34,9 +34,14 @@
             break;
     }
 
-    let mensagemFinal;
+    let mensagemFinal = (number3 % 2 == 0) ? `O resultado ( ${number3.toFixed(2).replace("." , ",")} ) é par`
+    : `O resultado é impar`;
+    mensagemFinal = (Number.isInteger(number3)) ? mensagemFinal + `, inteiro`
+    : mensagemFinal + `, decimal`;
+    mensagemFinal = (number3 > 0) ? mensagemFinal + ` e positivo.`
+    : mensagemFinal + ` e negativo.`;
     
     //SAÍDA
-    alert(mensagemFinal)
+    alert(mensagemFinal);
 
 </script>

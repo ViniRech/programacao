@@ -6,11 +6,79 @@
     */
 
     //ENTRADA
+    const hemisferio = prompt(`Você mora no hemisfério norte ou sul?`)
+    .trim().replace("hemisfério" , "").toLowerCase();
+    const mes = prompt(`Mês atual: (nome completo)`).trim().toLowerCase();
 
-    
     //PROCESSAMENTO
+    switch (hemisferio) {
+        case "sul":
+            switch (mes) {
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    alert(`É verão, querido.`);                    
+                    break;
 
+                case "abril":
+                case "maio":
+                case "junho":
+                    alert(`É outono.`);
+                    break;
 
-    //SAÍDA
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    alert(`É inverno.`);
+                    break;
+
+                case "outubro":
+                case "novembro":
+                case "dezembro":
+                    alert(`É primavera.`);
+                    break;
+                
+                default:
+                    alert(`Nome dos meses em nome completo.`);
+                    break;
+            }
+            break;
+
+        case "norte":
+            switch (mes) {
+                    case "janeiro":
+                    case "fevereiro":
+                    case "março":
+                        alert(`É inverno, querido.`);                    
+                        break;
+
+                    case "abril":
+                    case "maio":
+                    case "junho":
+                        alert(`É primavera.`);
+                        break;
+
+                    case "julho":
+                    case "agosto":
+                    case "setembro":
+                        alert(`É verão.`);
+                        break;
+
+                    case "outubro":
+                    case "novembro":
+                    case "dezembro":
+                        alert(`É outono.`);
+                        break;
+                    
+                    default:
+                        alert(`Nome dos meses em nome completo.`);
+                        break;
+            }
+            break;
+
+        default:
+            alert(`Resposta Inválida!`);
+            break;
+    }
 
 </script>
