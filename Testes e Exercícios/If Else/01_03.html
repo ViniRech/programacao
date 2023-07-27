@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema: Maior número
+    /*  Peça para o usuário informar dois números e diga, ao final do programa, 
+        qual dos dois é o maior número. */
+
+    //ENTRADA
+    let n1 = Number(prompt(`Informe um número:`).replace("," , "."));
+    let n2 = Number(prompt(`Informe mais um número:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    if (n1 > n2) alert(`${n1.toFixed(5).replace("." , ",")} é maior que ${n2
+        .toFixed(5).replace("." , ",")}`);
+    else alert(`${n2.toFixed(5).replace("." , ",")} é maior que ${n1
+        .toFixed(5).replace("." , ",")}`);
+
+</script>

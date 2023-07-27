@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //PROBLEMA: Compra na Feira
+    /*  Considere que a pessoa foi até a feira e realizou algumas compras, sendo:
+        Mamão: 5 Unidades
+        Melancia: 3 Kg
+        Abacate: 4 Unidades
+        Cebola: 1.1 Kg
+        Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos 
+        produtos que comprou (citados acima) e peça também para o usuário informar 
+        quanto dinheiro possui para realizar a compra. Calcule o custo total dos 
+        alimentos e verifique se há dinheiro suficiente para realizar a compra, 
+        indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a 
+        quantia que sobrou ou faltou para realizar a compra. Apresente também na 
+        tela o valor total da compra. */
+
+    //ENTRADA
+    let mamao = Number(prompt(`Informe o preço do mamão:`).replace("," , "."));
+    let melancia = Number(prompt(`Informe o preço da melancia:`).replace("," , "."));
+    let abacate = Number(prompt(`Informe o preço do abacate:`).replace("," , "."));
+    let cebola = Number(prompt(`Informe o preço da cebola:`).replace("," , "."));
+    let dinheiro = Number(prompt(`Informe o quanto de dinheiro possui:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    let precoTotal = mamao * 5 + melancia * 3 + abacate * 4 + cebola * 1.1;
+    if (precoTotal < dinheiro) alert(`Total da Compra: R$${precoTotal.toFixed(2).replace("." , ",")}. ` +
+        `Sobrará R$${(dinheiro - precoTotal).toFixed(2).replace("." , ",")}`);
+    else alert(`Total da Compra: R$${precoTotal.toFixed(2).replace("." , ",")}. ` +
+        `Faltará R$${(precoTotal - dinheiro).toFixed(2).replace("." , ",")}`);
+
+</script>
