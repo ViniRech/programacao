@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    /*
+    //Problema: Tipo da Gasolina
+        Faça um programa que receba o tipo da gasolina abastecida e a quantidade de litros abastecidos. Também pergunte a quilometragem 
+        que deseja percorrer com o abastecimento realizado.
+        Considere que cada tipo de combustível possibilita uma autonomia diferente para o veículo, conforme os dados abaixo:
+        - C-Gasolina Comum: 10 Km por litro
+        - A-Gasolina Aditivada: 12 Km por litro
+        - P-Gasolina Premium: 15 Km por litro
+        Informe se o abastecimento realizado será suficiente para percorrer a quilometragem desejada. Caso não seja, informe quantos 
+        litros faltam para percorrer a quilometragem desejada. */
+
+    //ENTRADA
+    let tipo = prompt(`Informe o tipo de gasolina: C, A, P`).toUpperCase().trim();
+    let qnt = Number(prompt(`Informe quantos litros foram abastecidos:`));
+    let km = Number(prompt(`Informe quantos KM serão percorridos:`));
+
+    //PROCESSAMENTO
+    if (tipo == "C") {
+        if (km > qnt * 10) alert(`Não será suficiente. Faltam ${Math.ceil((km - qnt * 10) / 10)}`);
+        else alert(`Será suficiente`);
+    }
+    else if (tipo == "A") {
+        if (km > qnt * 12) alert(`Não será suficiente. Faltam ${Math.ceil((km - qnt * 12) / 12)}`);
+        else alert(`Será suficiente`);
+    }
+    if (tipo == "C") {
+        if (km > qnt * 15) alert(`Não será suficiente. Faltam ${Math.ceil((km - qnt * 15) / 15)}`);
+        else alert(`Será suficiente`);
+    }
+    else alert(`Resposta inválida!`);
+
+</script>

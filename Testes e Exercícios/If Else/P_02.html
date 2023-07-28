@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    /*
+    //Problema: Despesas com o veículo
+        Peça para o usuário informar o seu salário bruto mensal. Também peça para ele informar os gastos que 
+        possui com o seu veículo pessoal, tais como Combustível (mensal), Seguro (mensal), IPVA (anual - dividir por 12) 
+        e licenciamento (anual - dividir por 12). Calcule se as despesas com o veículo ultrapassam 30% do salário 
+        bruto mensal. Se ultrapassar, informe que o usuário está gastando muito com o veículo e é preciso revê-las, 
+        além de informar o custo mensal total que ele possui com o veículo. Caso contrário, informe que as despesas 
+        com o veículo estão dentro do previsto e apresente o custo mensal total que ele possui com o veículo. */
+
+    //ENTRADA
+    let salBruto = Number(prompt(`Informe seu salário bruto:`).replace("," , "."));
+    let combustivel = Number(prompt(`Informe seu gasto mensal com combustível:`).replace("," , "."));
+    let seguro = Number(prompt(`Informe seu gasto mensal com seguro:`).replace("," , "."));
+    let ipva = Number(prompt(`Informe seu gasto anual com IPVA:`).replace("," , "."));
+    let licenciamento = Number(prompt(`Informe seu gasto anual com licenciamento:`).replace("," , "."));
+
+    //PROCESSAMENTO
+    if (salBruto * 0.3 < combustivel + seguro + ipva / 12 + licenciamento / 12)
+        alert(`Está gastando R$${(combustivel + seguro + ipva / 12 + licenciamento / 12).toFixed(2).replace("." , ",")}. Pare!`);
+    else alert(`Parabéns: R$${(combustivel + seguro + ipva / 12 + licenciamento / 12).toFixed(2).replace("." , ",")} de despesas`);
+
+</script>
