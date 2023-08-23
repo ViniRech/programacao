@@ -1,16 +1,20 @@
 <script>
     //Problema: Procurar letra
-    //Peça para o usuário digitar UMA palavra.
-    //Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
+    /*  Peça para o usuário digitar UMA palavra.
+        Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
 
-    //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
+        Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA. */
 
     //ENTRADA
     const palavra = prompt(`Digite UMA palavra:`).trim().toLowerCase();
     const letra = prompt(`Digite a letra que desejas encontrar:`).trim().toLowerCase();
 
     //PROCESSAMENTO
+    let arrayPalavra = [palavra].toString();
 
-    //SAÍDA
+    let letraProcurada = arrayPalavra.indexOf(letra, 0);
+
+    if (letraProcurada === -1) alert(`Essa letra não existe na ${palavra}`);
+    else if (letraProcurada !== -1) alert(`Essa letra existe e está na posição ${letraProcurada + 1}`);
 
 </script>
