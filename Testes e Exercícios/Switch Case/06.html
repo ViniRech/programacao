@@ -4,5 +4,25 @@
     // Calcule a idade do seu cão, baseada nos seguintes fatores:
     // - cães de porte pequeno: fator 5
     // - cães de porte médio: fator 6
-    // - cães grandes: fator 7.
+    // - cães grandes: fator 7
+    //ENTRADA
+    let cao = parseInt(prompt("Informe a idade de seu cãozinho:"));
+    let porte = prompt("Informe o porte do seu cão: (P - M - G)").trim().toUpperCase()
+
+    //PROCESSAMENTO
+    switch (porte) {
+        case "P":
+            alert(`Seu cão tem ${cao ** 5}`);
+            break;
+        case "M":
+            alert(`Seu cão tem ${cao ** 6}`);
+            break;
+        case "G":
+            alert(`Seu cão tem ${cao ** 7}`);
+            break;    
+        default:
+            alert("Resposta Inválida!");
+            break;
+    }
+
 </script>

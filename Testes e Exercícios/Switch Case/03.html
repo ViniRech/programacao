@@ -6,4 +6,38 @@
     - positivo ou negativo;
     - inteiro ou decimal.
     */
+    //ENTRADA
+    const numero1 = Number(prompt("Informe um número:").replace(",", "."));
+    const numero2 = Number(prompt("Informe outro número:").replace(",", "."));
+    let numero = 0;
+    const operacao = prompt("Informe qual operação matemática desejas realizar: (+ - x ÷)");
+
+    //PROCESSAMENTO
+    switch (operacao) {
+        case "+":
+            numero = numero1 + numero2;
+            break;
+        case "-":
+            numero = numero1 - numero2;
+            break;
+        case "x":
+            numero = numero1 * numero2;
+            break;
+        default:
+            numero = numero1 / numero2
+            break;
+    }
+
+    let mensagemFinal = (numero % 2 == 0) ? `${numero} é par, `
+    : `${numero} é impar, `;
+
+    mensagemFinal = (numero > 0) ? mensagemFinal + `positivo `
+    : (numero < 0) ? mensagemFinal + `negativo, `
+    : mensagemFinal + `neutro, `;
+
+    mensagemFinal = (Number.isInteger(numero)) ? mensagemFinal + `e inteiro.`
+    : mensagemFinal + `e decimal.`;
+
+    //SAÍDA
+    alert(mensagemFinal);
 </script>

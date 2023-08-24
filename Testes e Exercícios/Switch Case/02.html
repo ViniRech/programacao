@@ -1,5 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
-    /*
     //PROBLEMA: Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
-    */
+    //ENTRADA
+    const numero = parseInt(prompt("Informe um número inteiro:"));
+
+    //PROCESSAMENTO
+    switch (numero % 2) {
+        case 0:
+            alert("Par");
+            break;
+        default:
+            alert("Impar");
+            break;
+    }
 </script>
