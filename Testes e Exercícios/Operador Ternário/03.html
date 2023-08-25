@@ -1,4 +1,15 @@
 <script>
     //Problema: Maior 2
     //Construa um algoritmo que leia dois números inteiros. Verifique qual dos dois números é maior e o escreva.
+    //ENTRADA
+    const numero1 = Number(prompt("Informe um número:").replace("," , "."));
+    const numero2 = Number(prompt("Informe outro número:").replace("," , "."));
+
+    //PROCESSAMENTO
+    let mensagemFinal = (numero1 > numero2) ? numero1 + ' é maior dos números'
+    : (numero1 == numero2) ? 'Os dois número têm o mesmo valor'
+    : numero2 + ' é o maior dos números';
+
+    //SAÍDA
+    alert(mensagemFinal);
 </script>

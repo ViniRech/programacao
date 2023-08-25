@@ -1,6 +1,70 @@
 <script>
     /*
     //PROBLEMA: Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
-    De acordo com as respostas, informe qual a estação do ano correspondente.
-    */
+    De acordo com as respostas, informe qual a estação do ano correspondente.*/
+    //ENTRADA
+    const hemisfério = prompt("Informe em qual hemisfério estas:").trim().toLowerCase();
+    const mes = prompt("Informe as iniciais do mês atual: (jan - fev...)").trim().toLowerCase();
+
+    //PROCESSAMENTO
+    switch (hemisfério) {
+        case "norte":
+            switch (mes) {
+                case "jan":
+                case "fev":
+                case "mar":
+                    alert("Inverno");
+                    break;
+                case "abr":
+                case "mai":
+                case "jun":
+                    alert("Primavera");
+                    break;
+                case "jul":
+                case "ago":
+                case "set":
+                    alert("Verão");
+                    break;
+                case "out":
+                case "nov":
+                case "dez":
+                    alert("Outono");
+                    break;
+                default:
+                    alert("Resposta Inválida!");
+                    break;
+            }
+            break;
+
+        case "sul":
+            switch (mes) {
+                case "jan":
+                case "fev":
+                case "mar":
+                    alert("Verão");
+                    break;
+                case "abr":
+                case "mai":
+                case "jun":
+                    alert("Outono");
+                    break;
+                case "jul":
+                case "ago":
+                case "set":
+                    alert("Inverno");
+                    break;
+                case "out":
+                case "nov":
+                case "dez":
+                    alert("Primavera");
+                    break;
+                default:
+                    alert("Resposta Inválida!");
+                    break;
+            }
+        default:
+            alert("Resposta Inválida!");
+            break;
+
+    }
 </script>
