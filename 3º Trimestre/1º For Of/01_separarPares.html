@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    //PROBLEMA
+    //Considere a lista de números abaixo:
+    // let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+    //Faça um programa que identifique os números pares e apresente-os ao fim do programa, ordenados de forma crescente.
+
+    //ENTRADA
+    let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+    let numerosPares = [];
+
+    //PROCESSAMENTO
+    for (let pares of listaDeNumeros) {
+        if (pares % 2 === 0) 
+        numerosPares.push(pares)
+        numerosPares.sort((a, b) => a-b)
+    }
+
+    //SAÍDA
+    document.write(`Números pares: ${numerosPares.join(', ')}`);
+
+</script>
