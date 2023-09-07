@@ -12,21 +12,11 @@
     let femea = [];
 
     //PROCESSAMENTO
-    for (let genero of listaDeNomes) {
-        if (prompt(`${listaDeNomes[0]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(0, 1));
-        else femea.push(listaDeNomes.slice(0, 1));
-        if (prompt(`${listaDeNomes[1]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(1, 2));
-        else femea.push(listaDeNomes.slice(1, 2));
-        if (prompt(`${listaDeNomes[2]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(2, 3));
-        else femea.push(listaDeNomes.slice(2, 3));
-        if (prompt(`${listaDeNomes[3]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(3, 4));
-        else femea.push(listaDeNomes.slice(3, 4));
-        if (prompt(`${listaDeNomes[4]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(4, 5));
-        else femea.push(listaDeNomes.slice(4, 5));
-        if (prompt(`${listaDeNomes[5]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(5, 6));
-        else femea.push(listaDeNomes.slice(5, 6));
-        if (prompt(`${listaDeNomes[6]}: masculino(M) ou feminino(F)?`).toUpperCase() == "M") macho.push(listaDeNomes.slice(6, 7));
-        else femea.push(listaDeNomes.slice(6, 7)); 
+    for (let nome of listaDeNomes) {
+        let genero = prompt(nome + ' é masculino(M) ou feminino(F)?').toUpperCase();
+
+        if (genero == "M") macho.push(nome);
+        else femea.push(nome);
     }
 
     //SAÍDA
