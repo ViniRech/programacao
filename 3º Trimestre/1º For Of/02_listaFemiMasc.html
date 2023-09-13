@@ -13,7 +13,7 @@
 
     //PROCESSAMENTO
     for (let nome of listaDeNomes) {
-        let genero = prompt(nome + ' é masculino(M) ou feminino(F)?').toUpperCase();
+        let genero = prompt(nome + ' é masculino(M) ou feminino(F)?').trim().toUpperCase();
 
         if (genero == "M") macho.push(nome);
         else femea.push(nome);
@@ -23,4 +23,4 @@
     alert(macho.join(", "));
     alert(femea.join(", "));
 
-</script>
+</script> 
