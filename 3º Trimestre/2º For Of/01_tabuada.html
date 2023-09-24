@@ -9,13 +9,14 @@
     //Entrada
     let valores = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let multiplicador = Number(prompt(`Informe o multiplicador:`).replace(',' , '.'));
+    let resultado = [];
 
     //Processamento
     for (let mult of valores) {
-        let resultado = multiplicador * mult;
+        resultado.push(multiplicador * mult);
     }
 
     //Saída
-    document.write(resultado.join('; '));
+    document.write(resultado.join(', '));
     
 </script>
