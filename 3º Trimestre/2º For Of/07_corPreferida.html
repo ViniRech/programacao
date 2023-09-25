@@ -8,11 +8,20 @@
     */
 
     //Entrada
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    let coresPreferidas = [];
+    let quantidade = 0;
 
     //Processamento
-
+    for (let cor of cores) {
+        let gostas = prompt(`Tu gostas de ${cor}? ("S" ou "N")`).trim().toUpperCase();
+        if (gostas == "S") {
+            coresPreferidas.push(cor);
+            quantidade++;
+        }
+    }
 
     //Saída
+    alert(`Tu gostas de ${quantidade} cores e elas são: ${coresPreferidas.join(", ")}`);
 
 </script>
