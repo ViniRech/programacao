@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. 
+    Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. 
+    Apresente os dados em tela.
+    */
+
+    //ENTRADA
+    let habitantes = 50000;
+    
+    //PROCESSAMENTO
+    for (let i = 1; i <= 10; i++) {
+        habitantes *= 1.015;
+        if (i == 5) document.write(`Em 5 anos, a população será de ${Math.round(habitantes)} habitantes <br>`);
+        else if (i == 10) document.write(`Em 10 anos, a população será de ${Math.round(habitantes)} habitantes`);        
+    }
+
+    //SAÍDA
+
+</script>

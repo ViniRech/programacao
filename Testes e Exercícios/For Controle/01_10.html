@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, 
+    com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    let candidatoNome1 = prompt(`Nome do 1º candidato:`).trim();
+    let candidatoNome2 = prompt(`Nome do 2º candidato:`).trim();
+    let candidatoNome3 = prompt(`Nome do 3º candidato:`).trim();
+    let votantes = Number(prompt(`Quantos alunos irão votar?`));
+
+    let candidato1 = 0;
+    let candidato2 = 0;
+    let candidato3 = 0;
+
+    //PROCESSAMENTO
+    for (let i = 1; i <= votantes; i++) {
+        let voto = Number(prompt(`Candidatos: (1)${candidatoNome1}; (2)${candidatoNome2}; (3)${candidatoNome3}`));
+
+        if (voto == 1) candidato1++;
+        else if (voto == 2) candidato2++;
+        else if (voto == 3) candidato3++;        
+    }
+
+    //SAÍDA
+    document.write(`${candidatoNome1}: ${Math.round(candidato1 * 100 / votantes)}% de votos <br>
+    ${candidatoNome2}: ${Math.round(candidato2 * 100 / votantes)}% de votos <br>
+    ${candidatoNome3}: ${Math.round(candidato3 * 100 / votantes)}% de votos <br>
+    Total: ${votantes}`);
+
+</script>
