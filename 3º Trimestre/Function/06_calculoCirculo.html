@@ -8,11 +8,20 @@
     */
 
     //Entrada
-
+    let r = Number(prompt(`Informe o raio de um círculo:`));
 
     //Processamento
+    function calculoArea(raio) {
+        let area = Math.round(Math.PI * Math.pow(raio, 2));
+        return area;
+    }
 
+    function calculoPerimetro(raio) {
+        let perimetro = Math.round(2 * Math.PI * raio);
+        return perimetro;
+    }
 
     //Saída
+    alert(`Área: ${calculoArea(r)}; Perímetro: ${calculoPerimetro(r)}`);
 
 </script>
