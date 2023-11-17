@@ -6,11 +6,16 @@
     */
 
     //Entrada
-    let p = Number(`Informe`)
+    let p = Number(prompt(`Informe o seu peso:`).replace("," , "."));
+    let a = Number(prompt(`Informe a sua altura:`).replace("," , "."));
 
     //Processamento
-
+    function imc(peso, altura) {
+        let imc = peso / altura ** 2;
+        return(imc);
+    }
 
     //Saída
+    alert(`Seu IMC: ${(imc(p, a)).toFixed(1).replace("." , ",")}`);
 
 </script>
