@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+</head>
+
+<body>
+
+    <form>
+        <select name="idioma" id="idioma">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="br" selected="selected">Português-Brasil</option>
+        </select>
+
+        <div>
+            <input type="text" name="valor1" id="valor1">
+            <input type="text" name="valor2" id="valor2">
+        </div>
+
+        <div>
+            <p id="resultado"></p>
+        </div>
+
+        <div>
+            <input type="button" value="Soma" id="btSoma">
+            <input type="button" value="Subtracao" id="btSubtracao">
+            <input type="button" value="Multiplicacao" id="btMultiplicacao">
+            <input type="button" value="Divisao" id="btDivisao">
+        </div>
+
+        <div>
+            <input type="button" value="Botão 1" id="btn1" onclick="clq1()">
+            <input type="button" value="Botão 2" id="btn2">
+        </div>
+    </form>
+
+
+    <script type="text/javascript" src="javaScript.js"></script>
+
+</body>
+
+</html>
