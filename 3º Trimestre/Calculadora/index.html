@@ -12,37 +12,48 @@
 <body>
 
     <form>
-        <select name="idioma" id="idioma">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="br" selected="selected">Português-Brasil</option>
-        </select>
+        <fieldset>
+            <legend id="titulo">Calculadora</legend>
 
-        <div>
-            <input type="text" name="valor1" id="valor1">
-            <input type="text" name="valor2" id="valor2">
-        </div>
+            <div>
+                <p id="boasVindas">Esta é uma calculadora em diferentes idiomas</p>
+            </div>
 
-        <div>
-            <p id="resultado"></p>
-        </div>
+            <select name="idioma" id="idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="br" selected="selected">Português-Brasil</option>
+            </select>
 
-        <div>
-            <input type="button" value="Soma" id="btSoma">
-            <input type="button" value="Subtracao" id="btSubtracao">
-            <input type="button" value="Multiplicacao" id="btMultiplicacao">
-            <input type="button" value="Divisao" id="btDivisao">
-        </div>
+            <div>
+                <input type="text" name="valor1" id="valor1">
+                <input type="text" name="valor2" id="valor2">
+            </div>
 
-        <div>
-            <input type="button" value="Botão 1" id="btn1" onclick="clq1()">
-            <input type="button" value="Botão 2" id="btn2">
-        </div>
+            <div>
+                <p id="resultado"></p>
+            </div>
+
+            <div>
+                <input type="button" value="Soma" id="btSoma">
+                <input type="button" value="Subtracao" id="btSubtracao">
+                <input type="button" value="Multiplicacao" id="btMultiplicacao">
+                <input type="button" value="Divisao" id="btDivisao">
+            </div>
+
+            <!--
+            <div>
+                <input type="button" value="Botão 1" id="btn1" onclick="clq1()">
+                <input type="button" value="Botão 2" id="btn2">
+            </div>
+            -->
+        </fieldset>
+
     </form>
 
-
-    <script type="text/javascript" src="javaScript.js"></script>
+    <script type="text/javascript" src="math.js"></script>
+    <script type="text/javascript" src="translate.js"></script>
 
 </body>
 
