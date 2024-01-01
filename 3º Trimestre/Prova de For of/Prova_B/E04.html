@@ -1,0 +1,23 @@
+<script>
+    /*
+    Problema: Contar Decimais
+    Considere a seguinte lista de números:
+    let lista = [3.5, 8.3, 5, 7.7, 4.2, 5, 8, 9.3, 7];
+    Leia a lista e conte APENAS OS NÚMEROS DECIMAIS.
+    Apresente a quantidade de números decimais existentes na lista.
+    */
+
+    //Entrada
+    let lista = [3.5, 8.3, 5, 7.7, 4.2, 5, 8, 9.3, 7];
+    let decimais = [];
+
+    //Processamento
+    for (const numero of lista) if (!Number.isInteger(numero)) decimais.push(numero);
+
+    //Saída
+    document.write(`Há ${decimais.length} números decimais`);
+
+    /*
+    A quantidade de números decimais será de 5.
+    */
+</script>

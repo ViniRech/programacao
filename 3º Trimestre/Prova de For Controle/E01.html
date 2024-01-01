@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Contar letras
+    Considere a seguinte lista de elementos abaixo:
+    let lista = ["a", 1, 3, 2, "b", "D", "Z", "f", 4, 5, 7];
+    Usando o for com variável de controle, leia a lista e some os números que existem na lista. Apresente o resultado para o usuário.
+    Por exemplo, o resultado será 22 (1+3+2+4+5+7).
+    */
+
+    //Entrada
+    let lista = ["a", 1, 3, 2, "b", "D", "Z", "f", 4, 5, 7];
+    let soma = 0;
+
+    //Processamento
+    for (let i = 0; i < lista.length; i++) if (!isNaN(lista[i]) === true) soma += lista[i];
+
+    //Saída
+    alert(`A soma dos números é ${soma}.`);
+    
+</script>

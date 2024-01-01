@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Escrever números na tela
+    Peça para o usuário informar um número inteiro. Escreva todos os números, começando do número 1, até chegar ao número informado pelo usuário.
+    Por exemplo:
+    - Se o usuário informar o número 5, o resultado será: 1, 2, 3, 4, 5.
+    - Se o usuário informar o número 3, o resultado será: 1, 2, 3.
+    */
+
+    //Entrada
+    let numero = Number(prompt(`Informe um número inteiro:`));
+    let numeros = [];
+
+    //Processamento
+    for (let i = 1; i <= numero; i++) numeros.push(i);
+
+    //Saída
+    document.write(numeros.join(', '));
+
+</script>

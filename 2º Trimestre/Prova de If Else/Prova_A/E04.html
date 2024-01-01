@@ -1,0 +1,22 @@
+<script>
+    /*
+    Problema: Aluguel de espaço para eventos
+    Um espaço para eventos cobra R$ 300,00 por hora de evento. Além disso, cobra R$ 100,00 por pessoa que auxilia na organização do evento.
+    Peça para o usuário informar a quantidade de horas que o evento durou e a quantidade de pessoas que auxiliou na organização do evento.
+    Calcule e apresente o valor total que o usuário deverá pagar pelo evento.
+    Se o valor total for maior do que R$ 1.500,00, haverá cortesia (não será cobrado) duas horas de evento.
+    Se o valor total for maior do que R$ 2.000,00, haverá cortesia (não será cobrado) duas horas de evento e duas pessoas que auxiliaram na 
+    organização do evento.
+    Calcule e apresente o custo final do evento.
+    */
+    
+    //Entrada
+    let horas = Number(prompt(`Informe a quantidade de horas que o evento levou:`));
+    let pessoas = Number(prompt(`Informe quantas pessoas auxiliaram na organização do evento:`));
+
+    //Processamento
+    if (horas * 300 + pessoas * 100 > 1500) alert(`Custo final de R$${((horas - 2) * 300 + pessoas * 100).toFixed(2).replace("." , ",")}`);
+    else if (horas * 300 + pessoas * 100 > 2000) alert(`Custo final de R$${((horas - 2) * 300 + (pessoas - 2) * 100).toFixed(2).replace("." , ",")}`);
+    else alert(`Custo final de R$${(horas * 300 + pessoas * 100).toFixed(2).replace("." , ",")}`);
+
+</script>

@@ -1,0 +1,26 @@
+<script>
+    /*
+    Problema: Viagem
+    Considere que uma família foi viajar e, entre cada parada, percorreu a seguinte quilometragem:
+    let distancias = [100, 130, 180, 150];
+    Calcule a quilometragem total da viagem e também quantos quilômetros foram viajados por hora, considerando que a viagem demorou 10 horas.
+
+    */
+
+    //Entrada
+    let distancias = [100, 130, 180, 150];
+    let soma = 0;
+
+    //Processamento
+    for (const distância of distancias) {
+        soma += distância;
+    }
+
+    //Saída
+    document.write(`Quilometragem total: ${soma} Km <br>
+    Quilometragem por hora: ${soma / 10} Km`);
+
+    /*
+    A viagem teve extensão total de 560 Km e a distância percorrida por hora foi de 56 Km.
+    */
+</script>

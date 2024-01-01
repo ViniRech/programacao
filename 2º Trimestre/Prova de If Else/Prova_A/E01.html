@@ -1,0 +1,34 @@
+<script>
+    /*
+    Problema: Votação do líder da equipe
+    Uma equipe, contendo 5 alunos, precisa eleger um líder. Considere que existem dois candidatos a representante: João(1) e Maria(2). 
+    Faça um programa que receba o voto de cada aluno e calcule quem foi o representante eleito.
+    Apresente o resultado final, com o nome do líder escolhido e a quantidade de votos que recebeu.
+    */
+    
+    //Entrada
+    let a1 = prompt(`Digite 1 para João ou 2 para Maria:`);
+    let a2 = prompt(`Digite 1 para João ou 2 para Maria:`);
+    let a3 = prompt(`Digite 1 para João ou 2 para Maria:`);
+    let a4 = prompt(`Digite 1 para João ou 2 para Maria:`);
+    let a5 = prompt(`Digite 1 para João ou 2 para Maria:`);
+    let maria = 0;
+    let joao = 0;
+
+    //Processamento
+    if (a1 == "1") joao += 1;
+    if (a2 == "1") joao += 1;
+    if (a3 == "1") joao += 1;
+    if (a4 == "1") joao += 1;
+    if (a5 == "1") joao += 1;
+    if (a1 == "2") maria += 1;
+    if (a2 == "2") maria += 1;
+    if (a3 == "2") maria += 1;
+    if (a4 == "2") maria += 1;
+    if (a5 == "2") maria += 1;
+
+    if (maria > joao) alert(`Maria vence com ${maria} pontos!!!`);
+    else if (maria < joao) alert(`João vence com ${joao} pontos!!!`);
+    else alert(`Resposta inválida`);
+
+</script>

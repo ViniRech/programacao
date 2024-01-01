@@ -1,0 +1,45 @@
+<script>
+    /*
+    Problema: Apoio à Decisão
+    Uma pessoa deseja comprar um veículo. Para isso, ela precisa escolher um veículo que atenda às suas necessidades e que caiba no seu orçamento.
+    Faça um programa que receba o valor do veículo, o valor da entrada e o número de parcelas. Considere que o valor das parcelas é calculado da seguinte forma:
+    - Se o número de parcelas for menor que 12, o valor da parcela é o valor do veículo menos o valor da entrada dividido pelo número de parcelas;
+    - Se o número de parcelas for maior ou igual a 12, o valor da parcela é o valor do veículo menos o valor da entrada dividido pelo número de parcelas mais 10%.
+    
+    Independente da quantidade, apresente qual será o valor de cada parcela a ser paga pelo comprador.
+    Caso a parcela fique acima de R$ 1.000,00 pergunte ao usuário se ele deseja aumentar o número de parcelas para diminuir o valor de cada parcela. 
+    Caso ele deseje, pergunte ao usuário a quantidade de parcelas que ele deseja e apresente o valor de cada parcela. 
+    Caso o número de parcelas seja maior que 12, considere sempre o valor da parcela com 10% de acréscimo.
+    */
+    
+    //Entrada
+    let veiculo = Number(prompt(`Informe o valor do veículo:`).replace("," , "."));
+    let entrada = Number(prompt(`Informe o valor da entrada:`).replace("," , "."));
+    let parcelas = Number(prompt(`Informe o número de parcelas:`).replace("," , "."));
+
+    //Processamento
+    if (parcelas < 12) {
+        if ((veiculo - entrada) / parcelas > 1000) {
+            const pergunta = prompt(`O valor da parcela excede R$1.000,00. Deseja aumentar o número de parcelas? ("S" ou "N")`).toUpperCase();
+            if (pergunta == "S") {
+                parcelas = prompt(`Informe o número de parcelas:`);
+                if (parcelas < 12) alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas * 1.1).toFixed(2).replace("." , ",")}`);
+                else alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas).toFixed(2).replace("." , ",")}`);
+            }
+            else alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas).toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas).toFixed(2).replace("." , ",")}`);
+    }
+    else {
+        if ((veiculo - entrada) / parcelas * 1.1 > 1000) {
+            const pergunta = prompt(`O valor da parcela excede R$1.000,00. Deseja aumentar o número de parcelas? ("S" ou "N")`).toUpperCase();
+            if (pergunta == "S") {
+                parcelas = prompt(`Informe o número de parcelas:`);
+                alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas * 1.1).toFixed(2).replace("." , ",")}`);
+            }
+            else alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas * 1.1).toFixed(2).replace("." , ",")}`);
+        }
+        else alert(`Valor da parcela de R$${((veiculo - entrada) / parcelas * 1.1).toFixed(2).replace("." , ",")}`);
+    }
+
+</script>

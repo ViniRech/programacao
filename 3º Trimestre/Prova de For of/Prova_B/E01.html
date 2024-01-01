@@ -1,0 +1,29 @@
+<script>
+    /*
+    Problema: Números
+    Peça para o usuário inserir 5 números.
+    Adicione-os em uma lista.
+    Identifique o segundo maior número e o segundo menor número e apresente-os.
+    */
+
+    //Entrada
+    const listaCinco = [1, 2, 3, 4, 5];
+    let listaDeNumeros = [];
+
+    //Processamento
+    for (const numeros of listaCinco) {
+        let numero = Number(prompt(`Informe um número:`));
+        listaDeNumeros.push(numero);
+    }
+    listaDeNumeros.sort((a,b) => a-b);
+
+    //Saída
+    document.write(`Segundo maior número: ${listaDeNumeros[listaDeNumeros.length - 2]} <br>
+    Segundo menor número: ${listaDeNumeros[1]}`);
+
+    /*
+    Um exemplo de lista com 5 números: let lista = [5, 9, 7, 15, 12]
+    O resultado será:
+    O segundo maior número é o 12. O segundo menor número é o 7.
+    */
+</script>

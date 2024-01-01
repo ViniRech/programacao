@@ -1,0 +1,34 @@
+<script>
+    /*
+    Problema: Médias das Turmas
+    Considere que o Professor irá informar a média obtida pelas turmas em Programação ao longo do terceiro trimestre.
+    Peça para o professor informar as três notas. Adicione as em uma lista.
+    Identifique a nota mais alta e a média das turmas. Apresente a média mais alta e a média das turmas para o Professor.
+
+    */
+
+    //Entrada
+    const index = [1, 2, 3];
+    let notas = [];
+    let soma = 0;
+
+    //Processamento
+    for (const nota of index) {
+        let informarNota = Number(prompt(`Informe a média da turma:`));
+        notas.push(informarNota);
+        soma += informarNota;
+    }
+    notas.sort((a,b) => a-b);
+
+    //Saída
+    document.write(`Média mais alta: ${notas[notas.length - 1]} <br>
+    Média das turmas: ${soma / notas.length}`);
+
+    /*
+    Exemplo:
+    - Turma 1: 7
+    - Turma 2: 5
+    - Turma 3: 9
+    A média mais alta foi 9 e a média das turmas é 7
+    */
+</script>

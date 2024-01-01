@@ -1,0 +1,30 @@
+<script>
+    /*
+    Problema: Separar Nomes
+    Considere a seguinte lista de nomes:
+    let listaNomes = ["José da Silva", "Maria da Graça", "João de Oliveira", "Marisa Soares", "José Pereira", "Oscar Schmidt", "Regina Duarte", "José Silveira"];
+    Leia a lista de nomes e peça para o usuário responder, para cada nome, se é nome F-Feminino ou M-Masculino.
+    Além disso, peça para o usuário contabilizar quantos homens constam com o nome "José".
+    */
+
+    //Entrada
+    let listaNomes = ["José da Silva", "Maria da Graça", "João de Oliveira", "Marisa Soares", "José Pereira", "Oscar Schmidt", "Regina Duarte", "José Silveira"];
+    let macho = [];
+    let femea = [];
+    let conta = 0;
+
+    //Processamento
+    for (const nome of listaNomes) {
+        let genero = prompt(`${nome} é um nome feminino(F) ou masculino (M)?`).trim().toUpperCase();
+        if (genero == 'F') femea.push(nome)
+        else macho.push(nome);
+    }
+    for (const nomeMacho of macho) if (nomeMacho.includes('José')) conta++;
+
+    //Saída
+    document.write(`Na lista há ${femea.length} nomes femininos e ${macho.length} nomes maculinos, sendo ${conta} destes com o nome José`);
+
+    /*
+    Na lista constam 5 nomes Masculinos e 3 nomes Femininos. 3 homens são chamados de José.
+    */
+</script>
